@@ -1,1 +1,1 @@
-"# react-stable-decorator" 
+# react-stable-decorator

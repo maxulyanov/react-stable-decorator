@@ -1,4 +1,14 @@
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["reactStableDecorator"] = factory();
+	else
+		root["reactStableDecorator"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -2092,6 +2102,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+exports.default = reactStableDecorator;
+
 var _react = __webpack_require__(11);
 
 var _react2 = _interopRequireDefault(_react);
@@ -2263,8 +2275,6 @@ function reactStableDecorator(Component) {
     return ReactStable;
   }(_react2.default.Component);
 }
-
-exports.default = reactStableDecorator;
 
 /***/ }),
 /* 20 */
@@ -4963,3 +4973,4 @@ exports.default = ErrorComponent;
 
 /***/ })
 /******/ ]);
+});

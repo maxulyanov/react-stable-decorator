@@ -3,7 +3,11 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
-  output: { path: __dirname, filename: 'dist/bundle.js' },
+  output: {
+    library: "reactStableDecorator",
+    libraryTarget: "umd",
+    path: __dirname, filename: 'dist/bundle.js'
+  },
   resolve: {
     extensions: ['.js', '.jsx']
   },
@@ -19,4 +23,5 @@ module.exports = {
       }
     ]
   },
+
 };

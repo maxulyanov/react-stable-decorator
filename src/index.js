@@ -9,7 +9,7 @@ import ErrorComponent from './ErrorComponent';
  * @param CustomErrorComponent
  * @returns {ReactStable}
  */
-function reactStableDecorator(Component, printConsole = true, CustomErrorComponent = ErrorComponent) {
+export default function reactStableDecorator(Component, printConsole = true, CustomErrorComponent = ErrorComponent) {
 
   return class ReactStable extends React.Component {
 
@@ -119,7 +119,4 @@ function reactStableDecorator(Component, printConsole = true, CustomErrorCompone
 
   };
 
-
 }
-
-export default reactStableDecorator;
